@@ -4,13 +4,15 @@ const fs = require("fs");
 const path = require("path");
 const csv = require("csv-parser");
 const Product = require("../models/Product");
+const dotenv = require('dotenv');
+dotenv.config();
 
-const csvFilePath = path.join(__dirname, "products.csv");
+const csvFilePath = path.join(__dirname, ".csv");
 
-const MONGODB_URI = "mongodb://localhost:27017/your-db-name"; // update this
+ // update this
 
 mongoose
-  .connect(MONGODB_URI)
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("MongoDB connected");
     importCSV();

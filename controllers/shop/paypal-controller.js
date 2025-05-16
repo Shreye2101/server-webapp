@@ -17,8 +17,8 @@ const createPayment = async (req, res) => {
       },
     ],
     application_context: {
-      return_url: "http://localhost:5173/paypal-success",
-      cancel_url: "http://localhost:5173/paypal-cancel",
+      return_url: `${process.env.FRONTEND_URL}/paypal-success`,
+      cancel_url: `${process.env.FRONTEND_URL}/paypal-cancel`,
     },
   });
 

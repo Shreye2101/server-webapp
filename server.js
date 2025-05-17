@@ -32,7 +32,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
   cors({
-   origin: ['http://localhost:5173', 'https://cilent-ecommerce.vercel.app/'],
+   origin: ['http://localhost:5173', 'https://client-gold-xi.vercel.app/'],
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
